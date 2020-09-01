@@ -4,7 +4,8 @@
   padding:0;
   outline: 0;
   list-style:none;
-  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
 }
 .wrapper{
   overflow: hidden;
@@ -72,9 +73,8 @@ ins{
 
 body{
   background: url("../images/bg.png")no-repeat center top;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 900;
   color: #272727;
+  
 }
 
 /* start heder */
@@ -104,8 +104,10 @@ header .nav a{
 header .nav a:hover{
   color: #e4b806;
 }
+/* start slider */
 .main_slider{
   margin-top: 128px;
+  margin-bottom: 67px;
 }
 .main_slider ul{
   position: relative;
@@ -121,7 +123,9 @@ header .nav a:hover{
   transition: .4s;
 }
 .main_slider ul li img{
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
 }
 .main_slider ul li.active{
   opacity: 1;
@@ -129,26 +133,46 @@ header .nav a:hover{
 }
 .main_slider ul li.active .main_slider_title{
   /* the title appears */
-  transform: translate(0px);
+  -webkit-transform: translate(0px);
+      -ms-transform: translate(0px);
+          transform: translate(0px);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;                    
 }
 .main_slider ul li.active .main_slider_discription{
   /* the discription appears */
-  transform: translate(0px);
+  -webkit-transform: translate(0px);
+      -ms-transform: translate(0px);
+          transform: translate(0px);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .main_slider ul li.active .main_slider_price{
   /* the price appears */
-  transform: translate(0px);
+  -webkit-transform: translate(0px);
+      -ms-transform: translate(0px);
+          transform: translate(0px);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .main_slider ul li.active .main_slider_btn{
   /* the button appears */
-  transform: translate(0px);
+  -webkit-transform: translate(0px);
+      -ms-transform: translate(0px);
+          transform: translate(0px);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .main_slider ul li.active img{
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .main_slider_text{
@@ -169,18 +193,24 @@ header .nav a:hover{
   position: relative;
   left: -17px;
   /* the title disappears */
-  transform: translate(3000px);
+  -webkit-transform: translate(3000px);
+      -ms-transform: translate(3000px);
+          transform: translate(3000px);
 }
 .main_slider_discription{
   font-size: 18px;
   /* the discription disappears */
-  transform: translate(-3000px);
+  -webkit-transform: translate(-3000px);
+      -ms-transform: translate(-3000px);
+          transform: translate(-3000px);
 }
 .main_slider_price{
   font-size: 18px;
   margin-top: 22px;
   /* the price disappears */
-  transform: translate(-3000px);
+  -webkit-transform: translate(-3000px);
+      -ms-transform: translate(-3000px);
+          transform: translate(-3000px);
 }
 .main_slider_btn{
   font-size: 14px;
@@ -195,7 +225,9 @@ header .nav a:hover{
   left: -9px;
   width: 148px;
   /* the button disappears */
-  transform: translate(-3000px);
+  -webkit-transform: translate(-3000px);
+      -ms-transform: translate(-3000px);
+          transform: translate(-3000px);
 }
 .main_slider_btn i{
   width: 51px;
@@ -215,6 +247,8 @@ header .nav a:hover{
   left: -3px;
   border-radius: 50%;
   background: rgba(242, 201, 31, .2);
+  -webkit-transform: rotate(2);
+  -ms-transform: rotate(2);
   transform: rotate(2);
 }
 .main_slider_btn:hover{
@@ -222,7 +256,11 @@ header .nav a:hover{
   border-color: #f5c618;
 }
 .main_slider_btn:hover i::before{
-  transform: scale(2);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   opacity: 0;
 }
@@ -269,7 +307,10 @@ header .nav a:hover{
   width: 90px;
   height: 1px;
   background:#1c1c1c;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+
 }
 .main_slider_btns button{
   width: 21px;
@@ -282,7 +323,9 @@ header .nav a:hover{
 .main_slider_btns button.prev{
   border-top: 1px solid #1c1c1c;
   border-left: 1px solid #1c1c1c;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+transform: rotate(-45deg);
 }
 .main_slider_btns button.next{
   border-top: 1px solid #1c1c1c;
@@ -290,9 +333,119 @@ header .nav a:hover{
   transform: rotate(45deg);
   margin-top: 58px;
 }
+/* FINISH slider */
+
+/* START block sale of the day */
+.sale{
+  font-weight: 900;
+}
+.h2{
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.h2::before{
+  content: "";
+  width: 56px;
+  height: 2px;
+  background: #FCC208;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 29px;
+  margin-right: 13px;
+}
+.h2 span{
+  color: #FCC208;
+}
+.sale_block{
+  margin-top: 50px;
+}
+.sale_block_left{
+  width: 560px;
+}
+.sale_block_left img{
+  position: relative;
+  left: -129px;
+}
+.counter_sale{
+  text-align: center;
+  margin-top: 111px;
+}
+.counter_sale_title{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.counter_sale_title > *{
+  margin: 0 5px;
+}
+.counter_sale_title span{
+  color: #2f3333;
+}
+.counter_sale_title p{
+  display: inline;
+  color: #cfcfcf;
+}
+.counter_sale_title p ins{
+  color: #FCC208;
+}
+.counter_sale_desc{
+  color:#7b7b7b;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* START style Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown */
+.countdown-container{
+  margin-top: 29px;
+  margin-left: 20px;
+}
+.clock-item{
+  width: 86px;
+  display: inline-block;
+  margin: 0 5px;
+  
+}
+.clock-canvas{
+  max-height: 86px;
+  border-radius: 50%;
+}
+.clock-canvas::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 3px solid #ebebeb;
+  z-index: -1;
+}
+.clock-item .text{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 18px;
+}
+.clock-item .text .val{
+  font-size: 16px;
+  color: #2b2f2d;
+}
+.clock-item .text .type-time{
+  font-size: 16px;
+  color: #767676;
+  text-transform: uppercase;
+}
+/* FINISH style Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown  */
+
+
+
+/* START block sale of the day */
 
 
 
 
 
+/* color:#FCC208 */
 /* font-family: 'Open Sans', sans-serif; */
