@@ -54,4 +54,14 @@ $(function () {
             $current.text($li.filter('.active').index() + 1);
         });
     });
+
+    $('.popular_gallery').each(function () {
+        var $prevImg = $('.popular_gallery_prev span', this);
+        var $mainImg = $('.popular_gallery_main img', this);
+
+        $prevImg.click(function () {
+            $mainImg.eq($(this).index()).addClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
+        }).eq(0).click();
+    });
 });
