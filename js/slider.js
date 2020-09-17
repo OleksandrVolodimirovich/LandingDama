@@ -64,4 +64,15 @@ $(function () {
             $(this).addClass('active').siblings().removeClass('active');
         }).eq(0).click();
     });
+
+    $('.popular').each(function () {
+        var $tabBlock = $('.popular_all_tabs_blocks ul', this);
+        var $tabBtn = $('.popular_tab_btns a', this);
+
+        $tabBtn.click(function () {
+            $tabBlock.eq($(this).index()).addClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
+            return false;
+        }).eq(0).click();
+    });
 });
