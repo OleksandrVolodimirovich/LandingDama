@@ -65,6 +65,17 @@ $(function () {
         }).eq(0).click();
     });
 
+    $('.black_section_carousel li').each(function () {
+        var $prevImg = $('.black_section_carousel_preving span', this);
+        var $mainImg = $('.black_section_carousel_mining img', this);
+
+        $prevImg.click(function () {
+            $mainImg.eq($(this).index()).addClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
+        }).eq(0).click();
+    });
+
+
     $('.popular').each(function () {
         var $tabBlock = $('.popular_all_tabs_blocks ul', this);
         var $tabBtn = $('.popular_tab_btns a', this);
@@ -75,4 +86,29 @@ $(function () {
             return false;
         }).eq(0).click();
     });
+
+    $('.black_section_carousel').each(function () {
+        var $li = $('li', this);
+        var $prev = $('.prev', this);
+        var $next = $('.next', this);
+
+        $li.eq(0).addClass('active');
+
+        $prev.click(function () {
+            var index = $li.filter('.active').index();
+            if (index == 0) {
+                index = $li.length
+            }
+            $li.eq(index - 1).addClass('active').siblings().removeClass('active');
+        });
+
+        $next.click(function () {
+            var index = $li.filter('.active').index();
+            if (index == $li.length - 1) {
+                index = -1
+            }
+            $li.eq(index + 1).addClass('active').siblings().removeClass('active');
+        });
+    });
+
 });
