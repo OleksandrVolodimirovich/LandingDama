@@ -11,10 +11,10 @@
   overflow: hidden;
 }
 label{
-    cursor: pointer;
+  cursor: pointer;
 }
 h1, h2, h3, h4, h5, h6{
-    font-weight: normal;
+  font-weight: normal;
 }
 section, div{
   position: relative;
@@ -74,21 +74,25 @@ ins{
 body{
   background: url("../images/bg.png")no-repeat center top;
   color: #272727;
-  
 }
 
 /* start heder */
 .center{
-    width: 1174px;
-    margin: 0 auto;
+  width: 1174px;
+  margin: 0 auto;
 
 }
 header{
-    background: #141414;
-    padding: 15px 0px 15px;
+  background: #141414;
+  padding: 15px 0px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
 }
 header .center{
-    display: flex;
+  display: flex;
 }
 header .nav{
   margin-left: 127px;
@@ -106,7 +110,7 @@ header .nav a:hover{
 }
 /* start slider */
 .main_slider{
-  margin-top: 128px;
+  margin-top: 190px;
   margin-bottom: 67px;
 }
 .main_slider ul{
@@ -357,6 +361,24 @@ transform: rotate(-45deg);
   margin-right: 13px;
 }
 .h2 span{
+  color: #FCC208;
+}
+.h3{
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.h3::before{
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #FCC208;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 13px;
+  margin-right: 8px;
+}
+.h3 span{
   color: #FCC208;
 }
 .sale_block{
@@ -735,7 +757,6 @@ transform: rotate(-45deg);
 /* start BLACK SECTION */
 .black_section{
   background:#1b1b1b;
-  margin-bottom: 130px;
 }
 .black_section .center{
   height: 593px;
@@ -979,9 +1000,148 @@ slider button
   margin-top: 35px;
   margin-left: 0px;
 }
-
-
-
+/****************
+start multi section
+****************/
+.multi{
+  padding-top: 128px;
+}
+.multi_block{
+  width: 370px;
+}
+.multi .center{
+  display: flex;
+  justify-content: space-between;
+}
+.multi ul{
+  margin-top: 33px;
+}
+.multi ul li{
+  overflow: hidden;
+  position: relative;
+  padding-left: 150px;
+  transition: .4s;
+}
+.multi ul li:hover{
+  box-shadow: 0px 0px 40px rgba(2, 2, 2, .19);
+  transform: scale(1.1);
+}
+.multi ul li:hover .multi_text .multy_category{
+  transform:translateY(-20px);
+  transition: .4s;
+}
+.multi ul li:hover .multi_text .multi_title{
+  transform:translateY(-20px);
+  transition: .4s;
+}
+.multi ul li:hover .multi_text .price{
+  transform:translateY(-20px);
+  transition: .4s;
+}
+.multi ul li:hover .multi_text .soc a:nth-child(1){
+  transform: scale(1);
+  transition: .4s .1s;
+}
+.multi ul li:hover .multi_text .soc a:nth-child(2){
+  transform: scale(1);
+  transition: .4s .2s;
+}
+.multi ul li:hover .multi_text .soc a:nth-child(3){
+  transform: scale(1);
+  transition: .4s .3s;
+}
+.multi_img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.multi_img img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.multi_text{
+  padding-top: 34px;
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+.multy_category{
+  font-size: 14px;
+  color: #3d65b1;
+  transition: .4s;
+}
+.multi_title{
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 4px;
+}
+.multi .price{
+  font-size: 16px;
+  color: #6f6f6f;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.multi .price span{
+  color:#FCC208;
+}
+.multi_text .soc{
+  margin-left: 0px;
+  margin-top: 10px;
+}
+.multi_text .soc a{
+  transform: scale(0);
+}
+/**************
+start footer section
+***************/
+.brand{
+  padding-top: 65px;
+}
+.brand_line{
+  border: 2px solid #dddddd;
+}
+.brand_img{
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer{
+  background: #1f1f1f;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.footer .center{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_text{
+  color:#fff;
+  font-weight: 600;
+}
+.footer .soc{
+  margin-top: 0;
+  margin-left: 0;
+}
+.soc_footer a{
+  background: #fff;
+  border: 1px solid #000;
+  font-size: 14px;
+}
+.pay_footer a{
+  background: transparent;
+  border-radius: 0;
+  width: 32px;
+  height: 20px;
+}
 
 
 /* color:#FCC208 */
