@@ -1142,6 +1142,177 @@ start footer section
   width: 32px;
   height: 20px;
 }
+.pay_footer a:nth-child(1):hover{
+  background: url("../images/pay_h_1.png");
+}
+.pay_footer a:nth-child(2):hover{
+  background: url("../images/pay_h_2.png");
+}
+.pay_footer a:nth-child(3):hover{
+  background: url("../images/pay_h_3.png");
+}
+.pay_footer a:nth-child(4):hover{
+  background: url("../images/pay_h_4.png");
+}
+.pay_footer a:hover img{
+  display: none;
+}
+/***************
+create POPUP 
+****************/
+.close{
+  width: 22px;
+  height: 22px;
+  background: url("../images/popup_close.png");
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.close:hover{
+  border: 1px solid rgba(104, 102, 102, .45);
+}
+.popup{
+  width: 560px;
+  height: 300px;
+  background: #fff;
+  position: fixed;
+  top: 0;bottom: 0;
+  left: 0;right: 0;
+  margin: auto;
+  z-index: 100;
+  display: none;
+}
+.bg_popup{
+  background:rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;bottom: 0;
+  left: 0; right: 0;
+  z-index: 99;
+  display: none;
+}
+.popup_img{
+  width: 200px;
+  position: absolute;
+  top: 0;  bottom: 0;  left: 0;
+}
+.popup_img img{
+  position: absolute;
+  left: 0;  right: 0;
+  top: 0;  bottom: 0;
+  margin: auto;
+  width: 130px;
+}
+.popup_title{
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #252525;
+  padding: 13px 53px 13px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popup_text{
+  padding-top: 34px;
+  padding-bottom: 24px;
+  padding-top: 36px;
+  padding-left: 200px;
+  overflow: hidden;
+}
+.popup_category{
+  font-size: 14px;
+  color: #3d65b1;
+  transition: .4s;
+}
+.popup_goods_title{
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popup .price{
+  font-size: 16px;
+  color: #6f6f6f;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.popup .price span{
+  color:#FCC208;
+}
+.popup_content{
+  height: 244px;
+}
+.popup form{
+  margin-top: 24px;
+}
+.popup form input[type="text"]{
+  width: 150px;
+  height: 50px;
+  border: 2px solid #000;
+  text-align: center;
+  border-radius: 50px;
+  color: #828282;
+  font-size: 14px;
+  vertical-align: top;
+}
+.popup form button[type="submit"]{
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background: #252525;
+  padding: 14px 30px 14px 15px;
+  width: 148px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: .4s;
+}
+/* button <i> */
+.popup form button[type="submit"] i{
+  width: 51px;
+  height: 50px;  
+  position: absolute;
+  top: -2px;
+  right: -26px;
+  border-radius: 50%;
+  background: url(../images/ico_1.png) no-repeat center #f2c91f;
+}
+.popup form button[type="submit"] i::before{
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  right: -3px;
+  left: -3px;
+  border-radius: 50%;
+  background: rgba(242, 201, 31, .2);
+  -webkit-transform: rotate(2);
+  -ms-transform: rotate(2);
+  transform: rotate(2);
+}
+.popup form button[type="submit"]:hover{
+  color: #f5c618;
+  border-color: #f5c618;
+  background: transparent;
+}
+.popup form button[type="submit"]:hover i::before{
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
 
 
 /* color:#FCC208 */

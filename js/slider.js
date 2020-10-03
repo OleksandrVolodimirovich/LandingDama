@@ -1,5 +1,5 @@
 $(function () {
-    
+
     $('.countdown').final_countdown({
         'start': 1362139200,
         'end': 1388461320,
@@ -118,4 +118,23 @@ $(function () {
         $('html, body').animate({ scrollTop: coordinats }, 1000);
         return false;
     });
+
+    $('.open_popup').click(function () {
+        $('.popup .popup_title').text($(this).data('title'));
+        $('.popup .popup_category').text($(this).data('category'));
+        $('.popup .popup_goods_title').text($(this).data('desc'));
+        $('.popup .price span').text($(this).data('price'));
+        $('.popup .popup_img img').attr('src', $(this).data('img'));
+
+
+        $('.popup').fadeIn();
+        $('.bg_popup').fadeIn();
+
+        $('.bg_popup, .close').click(function () {
+            $('.popup').fadeOut();
+            $('.bg_popup').fadeOut();
+        });
+        return false
+    });
+
 });
