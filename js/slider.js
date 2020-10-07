@@ -126,6 +126,8 @@ $(function () {
         $('.popup .price span').text($(this).data('price'));
         $('.popup .popup_img img').attr('src', $(this).data('img'));
 
+        $('.popup input[name="popup_title"]').val($(this).data('title'));
+        $('.popup input[name="popup_price"]').val($(this).data('price'));
 
         $('.popup').fadeIn();
         $('.bg_popup').fadeIn();
@@ -136,5 +138,6 @@ $(function () {
         });
         return false
     });
+    
 
 });
