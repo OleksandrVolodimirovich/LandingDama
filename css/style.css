@@ -1717,6 +1717,12 @@ menu TOGGLE
   }
 }
 @media screen and (max-width:900px){
+  .main_slider_controls_pagination{
+    display: none;
+  }
+  .main_slider_controls_count{
+    padding-bottom: 45px;
+  }
   .black_section{
     padding-bottom: 50px;
   }
@@ -1807,6 +1813,16 @@ menu TOGGLE
   body{
     background: none;
   }
+  .main_slider ul li.active{
+    z-index: 3;
+  }
+  .main_slider ul li img{
+    max-width: 50%;
+  }
+  .main_slider_text{
+    position: relative;
+    padding-top: 0;
+  }
   .main_slider_title{
     color: #272727;
   }
@@ -1820,9 +1836,6 @@ menu TOGGLE
     color:  #272727;
     border: 2px solid #272727;
   }
-  .main_slider_controls_pagination{
-    display: none;
-  }
   .main_slider_controls{
     top: -102px;
     left: 0;
@@ -1834,7 +1847,7 @@ menu TOGGLE
             justify-content: center;
   }
   .main_slider ul{
-    height: 600px;
+    height: 640px;
   }
   .main_slider ul li.active img{
     opacity: .5;
@@ -1877,8 +1890,8 @@ menu TOGGLE
     padding-left: 140px;
   }
 }
-@media screen and (max-width:550px){
-  .popup{
+@media screen and (max-width:570px){
+  /* .popup{
     width: auto;
     height: 340px;
   }
@@ -1889,11 +1902,35 @@ menu TOGGLE
     display: block;
     margin-top: 10px;
     margin-left: 0;
+  } */
+  .popup{
+    width: auto;
+    height: 470px;
+    min-width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .popup_content{
+    height: auto;
+    padding-top: 20px;
+  }
+  .popup_img{
+    width: auto;
+    right: 0;
+    position: relative;
+    text-align: center;
+  }
+  .popup_img img{
+    position: relative;
+  }
+  .popup_text{
+    padding: 0;
+    text-align: center;
   }
 }
 @media screen and (max-width:500px){
   .main_slider ul{
-    height: 470px;
+    height: 500px;
   }
   .sale {
     padding-bottom: 40px;
@@ -1970,7 +2007,15 @@ menu TOGGLE
 }
 @media screen and (max-width:440px){
   .main_slider ul{
-    height: 400px;
+    height: 440px;
+  }
+  .popup form button[type="submit"]{
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  .popup form input{
+    margin-bottom: 6px;
   }
 }
 
