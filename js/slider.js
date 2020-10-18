@@ -140,4 +140,19 @@ $(function () {
     });
     
 
+
+
+
+    $('.menu_toggle').click(function () {
+        if ($(this).hasClass('active')) {
+            $('header .nav').removeClass('active');
+            $(this).removeClass('active');
+        }
+        else {
+            $('header .nav').addClass('active');
+            $(this).addClass('active');
+        }
+    });
+
+
 });
